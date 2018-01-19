@@ -1,0 +1,17 @@
+<% if flash[:errors] %>
+<% flash[:errors].each do |e| %>
+	<p><%= e %> </p>
+	<% end%>
+<% end%>
+
+<%= form_for(@player) do |f|%>
+	<p>
+		<%= f.label :First_name %></br>
+		<%= f.text_field :First_name %>
+	</p>
+	<p>
+		<%= f.label :Last_name %></br>
+		<%= f.text_field :Last_name %>
+	</p>
+	<%= f.submit %>
+	<% end %>
